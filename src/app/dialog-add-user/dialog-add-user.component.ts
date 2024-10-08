@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { SharedModule } from '../shared-module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -18,7 +18,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     SharedModule,
     MatFormFieldModule,
     FormsModule,
-    MatDialogModule,
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,

@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDrawer } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -16,6 +18,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDrawer,
     MatButtonModule,
     MatNativeDateModule,
+    MatCardModule,
+    MatDialogModule,
   ],
   exports: [
     CommonModule,
@@ -25,6 +29,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDrawer,
     MatButtonModule,
     MatNativeDateModule,
+    MatCardModule,
+    MatDialogModule,
   ],
 })
 export class SharedModule {}
