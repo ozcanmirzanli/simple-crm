@@ -2,27 +2,13 @@ import { Component, inject } from '@angular/core';
 import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { SharedModule } from '../shared-module';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 import { User } from '../../models/user.class';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-add-user',
   standalone: true,
-  imports: [
-    SharedModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatProgressBarModule,
-  ],
+  imports: [SharedModule],
   templateUrl: './dialog-add-user.component.html',
   styleUrl: './dialog-add-user.component.scss',
 })

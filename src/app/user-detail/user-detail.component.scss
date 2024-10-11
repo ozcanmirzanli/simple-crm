@@ -1,7 +1,7 @@
 .user-detail-header {
   min-height: 250px;
-  background-color: rgb(255, 114, 58);
-  color: white;
+  background-color: rgba(84, 84, 255, 0.747);
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: flex-end;
   flex-direction: row;
@@ -32,4 +32,10 @@
 mat-card-title {
   margin-left: 16px;
   margin-top: 16px;
+}
+
+.pin-right-upper-corner {
+  position: absolute;
+  right: 0;
+  top: 0;
 }

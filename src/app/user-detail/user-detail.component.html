@@ -1,4 +1,14 @@
 <mat-card class="user-detail-header">
+  <button
+    mat-icon-button
+    class="pin-right-upper-corner"
+    [matMenuTriggerFor]="userMenu"
+  >
+    <mat-icon [ngStyle]="{ color: 'white' }">more_vert</mat-icon>
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="editUserDetail()">Edit</button>
+  </mat-menu>
   <img src="assets/img/profile-picture.png" alt="profile-picture" />
   <div class="user-details">
     <h4>{{ user.firstName }} {{ user.lastName }}</h4>
@@ -7,6 +17,17 @@
 </mat-card>
 
 <mat-card class="mt-32">
+  <button
+    mat-icon-button
+    class="pin-right-upper-corner"
+    [matMenuTriggerFor]="addressMenu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #addressMenu="matMenu">
+    <button mat-menu-item (click)="editMenu()">Edit</button>
+  </mat-menu>
+
   <mat-card-title>Address</mat-card-title>
 
   <mat-card-content>

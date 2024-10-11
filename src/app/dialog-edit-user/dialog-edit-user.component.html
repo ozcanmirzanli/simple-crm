@@ -1,9 +1,13 @@
 <div class="dialog-container">
   <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-  <h2 mat-dialog-title>Add User</h2>
+  <h2 mat-dialog-title>Edit User</h2>
   <mat-dialog-content>
     <div>
-      <mat-form-field class="mat-form-field mr-16" appearance="outline">
+      <mat-form-field
+        [ngStyle]="{ 'margin-top': '16px' }"
+        class="mat-form-field mr-16"
+        appearance="outline"
+      >
         <mat-label>First Name</mat-label>
         <input
           [disabled]="loading"
@@ -13,7 +17,11 @@
         />
       </mat-form-field>
 
-      <mat-form-field class="mat-form-field" appearance="outline">
+      <mat-form-field
+        [ngStyle]="{ 'margin-top': '16px' }"
+        class="mat-form-field"
+        appearance="outline"
+      >
         <mat-label>Last Name</mat-label>
         <input
           [disabled]="loading"
@@ -41,47 +49,13 @@
         <mat-label>Birth Date</mat-label>
         <input
           [disabled]="loading"
-          [(ngModel)]="birthDate"
+          [(ngModel)]="user.birthDate"
           matInput
           [matDatepicker]="picker"
         />
         <mat-datepicker-toggle matIconSuffix [for]="picker">
           <mat-datepicker #picker></mat-datepicker>
         </mat-datepicker-toggle>
-      </mat-form-field>
-    </div>
-
-    <div>
-      <mat-form-field class="mat-form-field full-width" appearance="outline">
-        <mat-label>Street + House No.</mat-label>
-        <input
-          [disabled]="loading"
-          [(ngModel)]="user.street"
-          matInput
-          placeholder="Street + House No."
-        />
-      </mat-form-field>
-    </div>
-
-    <div>
-      <mat-form-field class="mat-form-field mr-16" appearance="outline">
-        <mat-label>Zip code</mat-label>
-        <input
-          [disabled]="loading"
-          [(ngModel)]="user.zipCode"
-          matInput
-          placeholder="Zip code"
-        />
-      </mat-form-field>
-
-      <mat-form-field class="mat-form-field" appearance="outline">
-        <mat-label>City</mat-label>
-        <input
-          [disabled]="loading"
-          [(ngModel)]="user.city"
-          matInput
-          placeholder="City"
-        />
       </mat-form-field>
     </div>
   </mat-dialog-content>
